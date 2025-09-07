@@ -1,0 +1,154 @@
+/* ===== Beginner Theme (simple, no variables, no shadows) ===== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Verdana, Arial, sans-serif;  /* beginner-friendly web-safe font */
+  color: #111;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+.container {
+  width: 92%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ===== Header / Nav ===== */
+.site-header {
+  background: #f0f0f0;
+  border-bottom: 1px solid #cccccc;
+}
+
+.logo {
+  float: left;
+  font-size: 1.05rem;
+  margin: 0;
+  padding: 0.8rem 0;
+}
+.logo span { color: teal; }
+
+.main-nav { float: right; padding: 0.5rem 0; }
+.main-nav ul { list-style: none; margin: 0; padding: 0; }
+.main-nav li { display: inline-block; margin-left: 0.75rem; }
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 0.4rem 0.2rem;
+  border-bottom: 2px solid transparent;
+}
+.main-nav a:hover,
+.main-nav a.active { border-color: teal; color: #000; }
+
+.clear { clear: both; }
+
+/* ===== Hero ===== */
+.hero {
+  background: lightblue;            /* simpler solid color (beginner vibe) */
+  padding: 2.5rem 0 2rem;
+  text-align: center;
+}
+.hero-inner h2 { font-size: 2rem; margin: 0 0 0.5rem; }
+.hero-inner p { margin: 0 auto 1rem; max-width: 640px; color: #222; }
+.btn {
+  display: inline-block;
+  background: teal;
+  color: #fff;
+  padding: 0.6rem 0.9rem;
+  border-radius: 4px;               /* small radius */
+  text-decoration: none;
+  border: 1px solid #006d6d;        /* no shadows, simple border */
+}
+.btn:hover { background: #007c7c; }
+
+/* ===== Sections ===== */
+.section { padding: 2rem 0; }
+.section h3 { margin-top: 0; font-size: 1.4rem; }
+.section.alt { background: #f7f7f7; }
+
+/* ===== Two-column float layout ===== */
+.col { width: 48%; }
+.col.left { float: left; }
+.col.right { float: right; }
+.callout {
+  background: #fff;
+  border: 1px solid #cccccc;  /* border */
+  padding: 0.8rem;            /* padding */
+  border-radius: 4px;         /* small, simple */
+}
+
+/* ===== Cards (Benefits) ===== */
+.card {
+  float: left;                /* floats */
+  width: 31%;
+  margin-right: 3.5%;
+  background: #fff;
+  border: 1px solid #cccccc;  /* border */
+  border-radius: 4px;
+  padding: 0.8rem;            /* padding */
+  min-height: 130px;          /* dimension */
+}
+.card:last-of-type { margin-right: 0; }
+.card h4 { margin: 0 0 0.4rem; }
+
+#benefits .container::after {
+  content: "";
+  display: block;             /* display usage */
+  clear: both;
+}
+
+/* ===== Steps (Child & Descendant selectors) ===== */
+.steps { padding-left: 1.1rem; }
+.steps > li {                 /* child selector */
+  margin: 0.35rem 0;
+}
+.section .steps li strong {   /* descendant selector */
+  color: teal;
+}
+
+/* ===== Visibility / Display examples ===== */
+.tip { font-size: 0.95rem; color: #444; margin: 0.3rem 0; }
+.is-hidden { display: none; }      /* removed from layout */
+.invisible { visibility: hidden; } /* takes space but invisible */
+
+/* ===== Practice Box ===== */
+.practice-box {
+  background: #fff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 1rem;
+  text-align: center;
+}
+.breathe-circle {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 0.6rem;
+  border-radius: 50%;
+  border: 5px solid teal;
+  animation: breathe 6s ease-in-out infinite;
+}
+.practice-note { color: #333; }
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50%      { transform: scale(1.08); opacity: 1; }
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background: #f0f0f0;
+  border-top: 1px solid #cccccc;
+  padding: 0.8rem 0;
+  text-align: center;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 800px) {
+  .card { width: 100%; margin: 0 0 1rem; }
+  .main-nav li { display: block; margin: 0.25rem 0; }
+  .logo, .main-nav { float: none; text-align: center; }
+  .col.left, .col.right { float: none; width: 100%; margin-bottom: 1rem; }
+}

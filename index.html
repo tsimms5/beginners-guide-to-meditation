@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Beginner’s Guide to Meditation</title>
+  <!-- Swap this href to styles.css if you want the more polished look -->
+  <link rel="stylesheet" href="styles_beginner.css" />
+  <meta name="description" content="Beginner-friendly site for Module 3 with simple styling and required CSS concepts." />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">A Beginner’s Guide to <span>Meditation</span></h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#how">How To</a></li>
+          <li><a href="#practice">Practice</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+      <div class="clear"></div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <h2>Find a few minutes of calm.</h2>
+      <p>Meditation can be simple. Start small, breathe, and feel better—one moment at a time.</p>
+      <a href="#practice" class="btn">Start 5-Minute Practice</a>
+    </div>
+  </section>
+
+  <!-- Float-based two-column layout -->
+  <section class="section alt">
+    <div class="container">
+      <div class="col left">
+        <h3>What You’ll Learn</h3>
+        <ul>
+          <li>Basics of mindfulness</li>
+          <li>How to sit comfortably</li>
+          <li>Simple breathing patterns</li>
+        </ul>
+      </div>
+      <aside class="col right callout">
+        <h4>Quick Tip</h4>
+        <p>Short daily sessions beat long, rare sessions.</p>
+      </aside>
+      <div class="clear"></div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section id="benefits" class="section">
+    <div class="container">
+      <h3>Why Try Meditation?</h3>
+
+      <div class="card">
+        <h4>Less Stress</h4>
+        <p>Short daily sessions can help calm your nervous system.</p>
+      </div>
+      <div class="card">
+        <h4>Better Focus</h4>
+        <p>Training attention helps you stay present with what matters.</p>
+      </div>
+      <div class="card">
+        <h4>Improved Sleep</h4>
+        <p>Gentle breathing and mindfulness support deeper rest.</p>
+      </div>
+
+      <div class="clear"></div>
+    </div>
+  </section>
+
+  <!-- How To -->
+  <section id="how" class="section alt">
+    <div class="container">
+      <h3>How to Meditate (Simple Steps)</h3>
+      <ol class="steps">
+        <li>Find a comfortable seat (chair or cushion).</li>
+        <li>Set a short time (3–5 minutes is great for beginners).</li>
+        <li>Gently close your eyes or soften your gaze.</li>
+        <li>Breathe naturally and notice the breath in and out.</li>
+        <li>When your mind wanders, kindly return to the breath.</li>
+      </ol>
+
+      <!-- Visibility / Display demo -->
+      <p class="tip">Tip: Start small and be consistent.</p>
+      <p class="tip is-hidden">You won’t see this because it’s <code>display: none</code>.</p>
+      <p class="tip invisible">This text takes space but is invisible (<code>visibility: hidden</code>).</p>
+    </div>
+  </section>
+
+  <!-- Practice -->
+  <section id="practice" class="section">
+    <div class="container">
+      <h3>5-Minute Practice</h3>
+      <p>Set a timer on your phone for 5 minutes. Breathe in for 4, out for 4. Repeat gently.</p>
+
+      <div class="practice-box">
+        <div class="breathe-circle"></div>
+        <p class="practice-note">Inhale… Exhale…</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="section alt">
+    <div class="container quote">
+      <blockquote>
+        “The best way to capture moments is to pay attention. This is how we cultivate mindfulness.”
+        <cite>— Jon Kabat-Zinn</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- About / Footer -->
+  <section id="about" class="section">
+    <div class="container">
+      <h3>About This Site</h3>
+      <p>
+        Built by <strong>Ta'Loria Simms</strong> for Web Design (Module 3). Demonstrates CSS child & descendant
+        selectors, float/clear layout, borders, padding, dimensions, colors, and visibility/display.
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Ta'Loria Simms • IMED 1316</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
